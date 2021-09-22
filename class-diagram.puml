@@ -1,0 +1,27 @@
+@startuml "Class Diagram"
+
+class Client <<entity>> {
+  +clientID
+  +name: String
+  +startConservation()
+  +boughtProducts
+}
+
+class Seller <<entity>> {
+  +sellerID 
+  +name: String
+  +rating
+  +addProduct()
+  +deleteProduct()
+  +allProducts: Array
+  +comments: Array
+}
+
+class Product <<entity>> {
+  +productID: String
+  +sellerID
+  +price: Number
+  +productComments: Array
+}
+
+@enduml

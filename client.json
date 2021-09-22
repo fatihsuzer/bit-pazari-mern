@@ -1,0 +1,20 @@
+[
+  {
+    "id": "3a",
+    "name": "Abdul",
+    "boughtProducts": [
+      {
+        "productHeader": "Iphone 11 64GB",
+        "productID": "123ab",
+        "sellerID": 44,
+        "price": 700,
+        "productComments": []
+      }
+    ]
+  },
+  {
+    "id": "45a",
+    "name": "Murad",
+    "boughtProducts": []
+  }
+]

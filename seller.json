@@ -1,0 +1,22 @@
+[
+  {
+    "id": 44,
+    "name": "Frank's Shop",
+    "allProducts": [
+      {
+        "productHeader": "Iphone 11 64GB",
+        "productID": "123ab",
+        "sellerID": "Frank's shop",
+        "price": 700,
+        "productComments": []
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": 55,
+    "name": "Tyran's shop",
+    "allProducts": [],
+    "comments": []
+  }
+]

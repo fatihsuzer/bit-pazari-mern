@@ -9,8 +9,8 @@ class Seller {
     this.comments = comments;
   }
 
-  addProduct(productID, productHeader, price) {
-    const product = new Product(productID, productHeader, this.sellerID, price);
+  addProduct(id, productHeader, price) {
+    const product = new Product(id, productHeader, this.id, price);
     this.allProducts.push(product);
     productDatabase.insert([product]);
     return product;

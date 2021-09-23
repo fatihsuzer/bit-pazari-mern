@@ -12,5 +12,12 @@
     "sellerID": 44,
     "price": 15,
     "productComments": []
+  },
+  {
+    "id": "car12",
+    "productHeader": "a new bmw",
+    "sellerID": 44,
+    "price": 20000,
+    "productComments": []
   }
 ]

@@ -1,3 +1,4 @@
+import sellerDatabase from './database/seller-database.js';
 import Seller from './seller.js';
 
 class Client {
@@ -6,18 +7,21 @@ class Client {
     this.name = name;
     this.boughtProducts = boughtProducts;
   }
-  buyProduct(shopName, id) {
-    if (shopName) {
-      shopName.allProducts.forEach((element, i) => {
-        if (element.id == id) {
-          console.log(this.name + ' just bought ' + element.productHeader);
-          return this.boughtProducts.push(element);
-        } else if (shopName.allProducts.length - 1 == i) {
-          return console.log("couldn't find any item on given id: " + id);
-        }
-      });
+  buyProduct(shopName, productIdToBuy) {
+    let seller = sellerDatabase.findBy('name', shopName);
+    if (seller) {
+      const product =
+        seller.allProducts[
+          seller.allProducts.findIndex(
+            (element) => element.id == productIdToBuy
+          )
+        ];
+      console.log(this.name + ' just bought ' + product);
+      return this.boughtProducts.push(product);
     }
+    return console.log("couldn't find any item on given id: " + shopName);
   }
+
   startConservation() {}
   rateProduct() {}
   static create({ id, name, boughtProducts }) {

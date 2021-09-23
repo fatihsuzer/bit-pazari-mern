@@ -13,6 +13,8 @@ function printEachObject(databaseName) {
   });
 }
 
+// printEachObject(productDatabase);
+// Creating sellers and client, adding products
 // const frank = new Seller("Frank's shop", 44);
 // const tyran = new Seller(55, "Tyran's shop");
 // frank.addProduct('Iphone 11 64GB', '123ab', 700, 15);
@@ -21,20 +23,21 @@ function printEachObject(databaseName) {
 // const nikel = new Seller("Nikel's shop", 15);
 // abdul.buyProduct(frank, '123ab', 1);
 // sellerDatabase.save([frank, tyran]);
-// sellers.forEach((element) => {
-//   console.log(element.name);
-// });
-// sellerDatabase.insert(tyran);
 // printEachObject(productDatabase);
-const item = productDatabase.findById(55);
-// console.log(item);
-// item.name = `Frank's Shop`;
-console.log(productDatabase.findByName('Iphone 11 64GB'));
-console.log(productDatabase.findBy('productHeader', 'Iphone 11 64GB'));
-// sellerDatabase.remove(item);
-// frank.addProduct('xdd', 'wowo', 15);
-// console.log(frank);
-// SellerDatabase.save([frank, tyran]);
-// ClientDatabase.save([abdul, murad]);
 
-// printEachObject(ProductDatabase);
+// finding a seller from seller database,
+// making it behaving like a class instead of object
+// const frank = sellerDatabase.findById(44);
+// frank.addProduct('car12', 'a new bmw', 20000);
+// sellerDatabase.update(frank);
+
+// searching an item from any database, with given instructions
+// console.log(productDatabase.findByName('Iphone 11 64GB'));
+// console.log(productDatabase.findBy('productHeader', 'Iphone 11 64GB'));
+
+// finding a client form database,
+// then buying a product from a seller
+// const abdul = clientDatabase.findBy('name', 'Abdul');
+// abdul.buyProduct(`Frank's Shop`, 'car12');
+// clientDatabase.update(abdul);
+// clientDatabase.printBoughtObjects(clientDatabase.findById('3a'));

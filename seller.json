@@ -4,10 +4,17 @@
     "name": "Frank's Shop",
     "allProducts": [
       {
+        "id": "123ab",
         "productHeader": "Iphone 11 64GB",
-        "productID": "123ab",
-        "sellerID": "Frank's shop",
+        "sellerID": 44,
         "price": 700,
+        "productComments": []
+      },
+      {
+        "id": "car12",
+        "productHeader": "a new bmw",
+        "sellerID": 44,
+        "price": 20000,
         "productComments": []
       }
     ],

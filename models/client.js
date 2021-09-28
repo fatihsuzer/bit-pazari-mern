@@ -1,5 +1,4 @@
-import sellerDatabase from './database/seller-database.js';
-import Seller from './seller.js';
+import sellerDatabase from '../database/seller-database.js';
 
 class Client {
   constructor(id, name, boughtProducts = []) {

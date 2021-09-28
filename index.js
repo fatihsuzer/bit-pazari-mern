@@ -1,29 +1,14 @@
-import Seller from './seller.js';
-import Client from './client.js';
-import Product from './product.js';
+import Seller from './models/seller.js';
+import Client from './models/client.js';
+import Product from './models/product.js';
 import {
   sellerDatabase,
   productDatabase,
   clientDatabase,
 } from './database/index.js';
+import printEachObject from './lib/print-each-object.js';
 
-function printEachObject(databaseName) {
-  databaseName.load().forEach((e) => {
-    console.log(e);
-  });
-}
-
-// printEachObject(productDatabase);
-// Creating sellers and client, adding products
-// const frank = new Seller("Frank's shop", 44);
-// const tyran = new Seller(55, "Tyran's shop");
-// frank.addProduct('Iphone 11 64GB', '123ab', 700, 15);
-// const abdul = new Client('3a', 'Abdul');
-// const murad = new Client('45a', 'Murad');
-// const nikel = new Seller("Nikel's shop", 15);
-// abdul.buyProduct(frank, '123ab', 1);
-// sellerDatabase.save([frank, tyran]);
-// printEachObject(productDatabase);
+printEachObject(sellerDatabase);
 
 // finding a seller from seller database,
 // making it behaving like a class instead of object
@@ -41,3 +26,4 @@ function printEachObject(databaseName) {
 // abdul.buyProduct(`Frank's Shop`, 'car12');
 // clientDatabase.update(abdul);
 // clientDatabase.printBoughtObjects(clientDatabase.findById('3a'));
+// sellerDatabase.insert(abdul);

@@ -1,5 +1,5 @@
 import Product from './product.js';
-import productDatabase from './database/product-database.js';
+import productDatabase from '../database/product-database.js';
 
 class Seller {
   constructor(id, name, allProducts = [], comments = []) {

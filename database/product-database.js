@@ -1,5 +1,5 @@
 import BaseDatabase from './base-database.js';
-import Product from '../product.js';
+import Product from '../models/product.js';
 
 class ProductDatabase extends BaseDatabase {
   findById(objectId) {

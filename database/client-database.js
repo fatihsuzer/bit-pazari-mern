@@ -1,5 +1,5 @@
 import BaseDatabase from './base-database.js';
-import Client from '../client.js';
+import Client from '../models/client.js';
 import sellerDatabase from './seller-database.js';
 
 class ClientDatabase extends BaseDatabase {

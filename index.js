@@ -8,7 +8,7 @@ import {
 } from './database/index.js';
 import printEachObject from './lib/print-each-object.js';
 
-printEachObject(sellerDatabase);
+//printEachObject(sellerDatabase);
 
 // finding a seller from seller database,
 // making it behaving like a class instead of object
@@ -27,3 +27,10 @@ printEachObject(sellerDatabase);
 // clientDatabase.update(abdul);
 // clientDatabase.printBoughtObjects(clientDatabase.findById('3a'));
 // sellerDatabase.insert(abdul);
+async function main() {
+  let sellerUser = await sellerDatabase.findById(44);
+  //sellerUser.addProduct('thirdItemId123', 'gray coffe cup', 10);
+  console.log(sellerUser);
+  sellerDatabase.update(sellerUser);
+}
+main();

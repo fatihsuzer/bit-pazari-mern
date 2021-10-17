@@ -6,8 +6,8 @@ class Client {
     this.name = name;
     this.boughtProducts = boughtProducts;
   }
-  buyProduct(shopName, productIdToBuy) {
-    let seller = sellerDatabase.findBy('name', shopName);
+  async buyProduct(shopId, productIdToBuy) {
+    let seller = await sellerDatabase.findById(shopId);
     if (seller) {
       const product =
         seller.allProducts[
@@ -15,10 +15,10 @@ class Client {
             (element) => element.id == productIdToBuy
           )
         ];
-      console.log(this.name + ' just bought ' + product);
+      console.log(this.name + ' just bought ' + product.productHeader);
       return this.boughtProducts.push(product);
     }
-    return console.log("couldn't find any item on given id: " + shopName);
+    return console.log("couldn't find any item on given id: " + shopId);
   }
 
   startConservation() {}

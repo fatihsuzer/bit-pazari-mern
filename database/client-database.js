@@ -3,17 +3,17 @@ import Client from '../models/client.js';
 import sellerDatabase from './seller-database.js';
 
 class ClientDatabase extends BaseDatabase {
-  findById(objectId) {
-    const objects = this.load();
+  async findById(objectId) {
+    const objects = await this.load();
     return objects.find((element) => element.id === objectId);
   }
-  printBoughtObjects(client) {
-    const sellers = sellerDatabase.load();
-    const object = this.load().find((element) => element.id === client.id);
-    object.boughtProducts.forEach((element) => {
+  async printBoughtObjects(client) {
+    const objects = await this.load();
+    const object = objects.find((element) => element.id === client.id);
+    object.boughtProducts.forEach(async (element) => {
       console.log(
         `${object.name} bought ${element.productHeader} from ${
-          sellerDatabase.findById(element.sellerID).name
+          (await sellerDatabase.findById(element.sellerID)).name
         }`
       );
     });

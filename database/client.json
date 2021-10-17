@@ -1,19 +1,13 @@
 [
   {
     "id": "3a",
-    "name": "Abdul",
+    "name": "mike",
     "boughtProducts": [
       {
+        "id": "123ab",
         "productHeader": "Iphone 11 64GB",
-        "productID": "123ab",
         "sellerID": 44,
         "price": 700,
-        "productComments": []
-      },
-      {
-        "id": "car12",
-        "productHeader": "a new bmw",
-        "price": 20000,
         "productComments": []
       }
     ]

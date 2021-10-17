@@ -16,6 +16,13 @@
         "sellerID": 44,
         "price": 20000,
         "productComments": []
+      },
+      {
+        "id": "thirdItemId123",
+        "productHeader": "gray coffe cup",
+        "sellerID": 44,
+        "price": 10,
+        "productComments": []
       }
     ],
     "comments": []
@@ -23,6 +30,12 @@
   {
     "id": 55,
     "name": "Tyran's shop",
+    "allProducts": [],
+    "comments": []
+  },
+  {
+    "id": 11,
+    "name": "mike the seller",
     "allProducts": [],
     "comments": []
   }

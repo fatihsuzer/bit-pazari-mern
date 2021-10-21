@@ -1,18 +1,23 @@
 import Product from './product.js';
 import productDatabase from '../database/product-database.js';
+import { v4 as uuidv4 } from 'uuid';
 
 class Seller {
-  constructor(id, name, allProducts = [], comments = []) {
+  constructor(id = uuidv4(), name, allProducts = [], comments = []) {
     this.id = id;
     this.name = name;
     this.allProducts = allProducts;
     this.comments = comments;
   }
 
-  addProduct(id, productHeader, price) {
-    const product = new Product(id, productHeader, this.id, price);
+  async addProduct(productHeader, price) {
+    const product = Product.create({
+      productHeader: productHeader,
+      seller: this,
+      price: price,
+    });
     this.allProducts.push(product);
-    productDatabase.insert([product]);
+    await productDatabase.insert(product);
     return product;
   }
 

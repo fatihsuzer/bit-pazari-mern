@@ -1,65 +1,104 @@
-[
-  {
-    "id": "123ab",
-    "productHeader": "Iphone 11 64GB",
-    "sellerID": "44",
-    "price": 700,
-    "productComments": []
-  },
-  {
-    "id": "wowo",
-    "productHeader": "foo",
-    "sellerID": "44",
-    "price": 15,
-    "productComments": []
-  },
-  {
-    "id": "car12",
-    "productHeader": "a new bmw",
-    "sellerID": "44",
-    "price": 20000,
-    "productComments": []
-  },
-  {
-    "id": "thirdItemId123",
-    "productHeader": "gray coffe cup",
-    "sellerID": "44",
-    "price": 10,
-    "productComments": []
-  },
-  {
-    "id": "dummyItemId55",
-    "productHeader": "(dummy item productHeader)",
-    "sellerID": "55",
-    "price": 10,
-    "productComments": []
-  },
-  {
-    "id": "abc12",
-    "productHeader": "axiosCreated Item",
-    "sellerID": "44",
-    "price": 22,
-    "productComments": []
-  },
-  {
-    "id": "abc12",
-    "productHeader": "axiosCreated Item",
-    "sellerID": "44",
-    "price": 22,
-    "productComments": []
-  },
-  {
-    "id": "abc12",
-    "productHeader": "axiosCreated Item",
-    "sellerID": "44",
-    "price": 22,
-    "productComments": []
-  },
-  {
-    "id": "abc12",
-    "productHeader": "axiosCreated Item",
-    "sellerID": "44",
-    "price": 22,
-    "productComments": []
-  }
-]
+[[
+  "1",
+  "2",
+  "3",
+  "4",
+  "5"
+],{
+  "id": "6",
+  "productHeader": "7",
+  "seller": "8",
+  "price": 75,
+  "productComments": "9"
+},{
+  "id": "10",
+  "productHeader": "11",
+  "seller": "12",
+  "price": 700,
+  "productComments": "13"
+},{
+  "id": "14",
+  "productHeader": "15",
+  "seller": "16",
+  "price": 20200,
+  "productComments": "17"
+},{
+  "id": "18",
+  "productHeader": "19",
+  "seller": "20",
+  "price": 10,
+  "productComments": "21"
+},{
+  "id": "22",
+  "productHeader": "23",
+  "seller": "24",
+  "price": 30,
+  "productComments": "25"
+},"4a785cdd-196b-46c1-9fc3-f6273c44d47a","dummy item","",[],"0529215b-2396-48fb-a1d4-9e405b60ec97","Iphone 11 64GB",{
+  "id": "26",
+  "name": "27",
+  "allProducts": "28",
+  "comments": "29"
+},[],"cb3b5c68-21cc-467f-a3a0-e9b53d6ba5b7","a new bmw ",{
+  "id": "26",
+  "name": "27",
+  "allProducts": "30",
+  "comments": "31"
+},[],"24627c8a-90b4-4baa-a005-8a664d49736c","gray coffe cup",{
+  "id": "26",
+  "name": "27",
+  "allProducts": "32",
+  "comments": "33"
+},[],"fb65f88b-71f9-4566-93dd-040f2fa4b062","long bed sheet",{
+  "id": "34",
+  "name": "35",
+  "allProducts": "36",
+  "comments": "37"
+},[],"c182c037-0a9e-4de0-a3b9-fc5fa5302a53","Frank's shop",[
+  "38"
+],[],[
+  "39",
+  "40"
+],[],[
+  "41",
+  "42",
+  "43"
+],[],"64298f3c-98a7-429e-a22b-1e8dc9f16391","Tyran's shop",[
+  "5"
+],[],{
+  "id": "10",
+  "productHeader": "11",
+  "seller": "12",
+  "price": 700,
+  "productComments": "13"
+},{
+  "id": "10",
+  "productHeader": "11",
+  "seller": "16",
+  "price": 700,
+  "productComments": "44"
+},{
+  "id": "14",
+  "productHeader": "15",
+  "seller": "16",
+  "price": 20200,
+  "productComments": "17"
+},{
+  "id": "10",
+  "productHeader": "11",
+  "seller": "20",
+  "price": 700,
+  "productComments": "45"
+},{
+  "id": "14",
+  "productHeader": "15",
+  "seller": "20",
+  "price": 20200,
+  "productComments": "46"
+},{
+  "id": "18",
+  "productHeader": "19",
+  "seller": "20",
+  "price": 10,
+  "productComments": "21"
+},[],[],[]]

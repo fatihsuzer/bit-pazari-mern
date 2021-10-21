@@ -1,7 +1,8 @@
 import sellerDatabase from '../database/seller-database.js';
+import { v4 as uuidv4 } from 'uuid';
 
 class Client {
-  constructor(id, name, boughtProducts = []) {
+  constructor(id = uuidv4(), name, boughtProducts = []) {
     this.id = id;
     this.name = name;
     this.boughtProducts = boughtProducts;
@@ -9,12 +10,10 @@ class Client {
   async buyProduct(shopId, productIdToBuy) {
     let seller = await sellerDatabase.findById(shopId);
     if (seller) {
-      const product =
-        seller.allProducts[
-          seller.allProducts.findIndex(
-            (element) => element.id == productIdToBuy
-          )
-        ];
+      const index = seller.allProducts.findIndex(
+        (element) => element.id == productIdToBuy
+      );
+      const product = seller.allProducts[index];
       console.log(this.name + ' just bought ' + product.productHeader);
       return this.boughtProducts.push(product);
     }

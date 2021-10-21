@@ -1,0 +1,9 @@
+extends layout
+block content
+  h2 Sellers 
+  p There are #{sellers.length} sellers available.
+
+  ol 
+    each seller in sellers
+      li
+        a(href=`/sellers/${seller.id}`)= seller.name

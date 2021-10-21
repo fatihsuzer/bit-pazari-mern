@@ -1,26 +1,47 @@
 [
   {
-    "id": 44,
+    "id": "44",
     "name": "Frank's Shop",
     "allProducts": [
       {
         "id": "123ab",
         "productHeader": "Iphone 11 64GB",
-        "sellerID": 44,
+        "sellerID": "44",
         "price": 700,
         "productComments": []
       },
       {
         "id": "car12",
         "productHeader": "a new bmw",
-        "sellerID": 44,
+        "sellerID": "44",
         "price": 20000,
         "productComments": []
       },
       {
         "id": "thirdItemId123",
         "productHeader": "gray coffe cup",
-        "sellerID": 44,
+        "sellerID": "44",
+        "price": 10,
+        "productComments": []
+      },
+      {
+        "id": "abc12",
+        "productHeader": "axiosCreated Item",
+        "sellerID": "44",
+        "price": 22,
+        "productComments": []
+      }
+    ],
+    "comments": []
+  },
+  {
+    "id": "55",
+    "name": "Tyran's shop",
+    "allProducts": [
+      {
+        "id": "dummyItemId55",
+        "productHeader": "(dummy item productHeader)",
+        "sellerID": "55",
         "price": 10,
         "productComments": []
       }
@@ -28,14 +49,14 @@
     "comments": []
   },
   {
-    "id": 55,
-    "name": "Tyran's shop",
+    "id": "11",
+    "name": "Mike the seller",
     "allProducts": [],
     "comments": []
   },
   {
-    "id": 11,
-    "name": "mike the seller",
+    "id": "25",
+    "name": "Axios market",
     "allProducts": [],
     "comments": []
   }

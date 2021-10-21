@@ -1,0 +1,12 @@
+extends layout
+block content
+  h2 Seller detail 
+  p #{seller.name}
+
+  h3 Available for sale: 
+  if seller.allProducts.length 
+    ol 
+      each product in seller.allProducts 
+        li #{product.productHeader}
+  else 
+    p no item listed yet. 

@@ -36,16 +36,30 @@ class BaseDatabase {
 
   async remove(object) {
     const objects = await this.load();
-    const index = objects.findIndex((e) => e.id === object.id);
+    const index = objects.findIndex((o) => o.id === object.id);
     if (index != -1) {
       objects.splice(index, 1);
       return this.save(objects);
     }
     throw new Error(`cannot find given id, remove task failed!`);
   }
+
+  async removeBy(property, value) {
+    const objects = await this.load();
+
+    const index = objects.findIndex((o) => o[property] == value);
+    if (index == -1)
+      throw new Error(
+        `Cannot find${this.model.name} instance with id ${property} ${value}`
+      );
+
+    objects.splice(index, 1);
+    await this.save(objects);
+  }
+
   async update(object) {
     const objects = await this.load();
-    const index = objects.findIndex((e) => e.id == object.id);
+    const index = objects.findIndex((o) => o.id == object.id);
     if (index == -1)
       throw new Error(
         `Cannot find${this.model.name} instance with id ${object.id}`
@@ -54,7 +68,7 @@ class BaseDatabase {
     await this.save(objects);
   }
   async findBy(property, value) {
-    return await this.load().find((e) => e[property] == value);
+    return await this.load().find((o) => o[property] == value);
   }
 }
 export default BaseDatabase;

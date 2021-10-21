@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/fatihsuzer/bit-pazari-mevn/issues"
   },
-  "homepage": "https://github.com/fatihsuzer/bit-pazari-mevn#readme"
+  "homepage": "https://github.com/fatihsuzer/bit-pazari-mevn#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
 }

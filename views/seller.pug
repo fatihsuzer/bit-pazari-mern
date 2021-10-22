@@ -2,6 +2,7 @@ extends layout
 block content
   h2 Seller detail 
   p #{seller.name}
+  p sellerid:  #{seller.id}
 
   h3 Available for sale: 
   if seller.allProducts.length 

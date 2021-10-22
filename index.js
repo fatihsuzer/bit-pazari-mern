@@ -1,6 +1,6 @@
 import express from 'express';
 import sellerDatabase from './database/seller-database.js';
-import Seller from './models/seller.js';
+import productDatabase from './database/product-database.js';
 import bodyParser from 'body-parser';
 
 const app = express();
@@ -15,8 +15,7 @@ app.get('/sellers', async (req, res) => {
 });
 
 app.post('/sellers', async (req, res) => {
-  const seller = Seller.create(req.body);
-  await sellerDatabase.insert(seller);
+  const seller = await sellerDatabase.insert(req.body);
   res.send(seller);
 });
 
@@ -28,16 +27,23 @@ app.delete('/sellers/:sellerId', async (req, res) => {
 
 app.get('/sellers/:sellerId', async (req, res) => {
   const seller = await sellerDatabase.findById(req.params.sellerId);
-  if (!seller) return res.send('404, seller not found').sendStatus(404);
+  if (!seller) return res.status(404).send('404, seller not found');
   res.render('seller', { seller: seller });
 });
 
 app.post('/sellers/:sellerId', async (req, res) => {
   const { sellerId } = req.params;
-  const { productId, productHeader, price } = req.body;
+  const { productHeader, price } = req.body;
   const seller = await sellerDatabase.findById(sellerId);
-  seller.addProduct(productId, productHeader, price);
+  seller.addProduct(productHeader, price);
   sellerDatabase.update(seller);
+  res.send('OK');
+});
+
+app.delete('/sellers/:sellerId/:productId', async (req, res) => {
+  const { sellerId, productId } = req.params;
+  await sellerDatabase.removeProduct(sellerId, productId);
+  await productDatabase.removeBy('id', productId);
   res.send('OK');
 });
 

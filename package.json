@@ -1,0 +1,29 @@
+{
+  "name": "bit-pazari-mevn",
+  "version": "1.0.0",
+  "description": "a vue web page for buying and selling stuff.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon --ignore '*.json'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatihsuzer/bit-pazari-mevn.git"
+  },
+  "author": "Fatih Suzer <fatih-suzer@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fatihsuzer/bit-pazari-mevn/issues"
+  },
+  "homepage": "https://github.com/fatihsuzer/bit-pazari-mevn#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "flatted": "^3.2.2",
+    "pug": "^3.0.2",
+    "uuid": "^8.3.2"
+  }
+}

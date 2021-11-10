@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import sellersRouter from './routes/sellers.js';
 import indexRouter from './routes/index.js';
+import mongoose from './mongo-connection.js';
 
 const app = express();
 const port = 3000;

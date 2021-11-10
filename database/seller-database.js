@@ -2,11 +2,6 @@ import BaseDatabase from './base-database.js';
 import Seller from '../models/seller.js';
 
 class SellerDatabase extends BaseDatabase {
-  async findById(objectId) {
-    const objects = await this.load();
-    return objects.find((e) => e.id === objectId);
-  }
-
   async removeProduct(sellerId, productId) {
     const objects = await this.load();
     const seller = objects.find((o) => o.id == sellerId);

@@ -1,0 +1,14 @@
+POST http://localhost:3000/sellers/ HTTP/1.1
+content-type: application/json
+
+{"name":"client posted seller"}
+###
+
+GET  http://localhost:3000/sellers/618b8256f082c6bebb973d22 HTTP/1.1
+
+
+###
+PATCH http://localhost:3000/sellers/618b8256f082c6bebb973d22 HTTP/1.1
+content-type: application/json
+
+{"name":"patched client of mongo"}

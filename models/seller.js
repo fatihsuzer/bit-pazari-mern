@@ -1,13 +1,18 @@
-// import Product from './product.js';
-import productDatabase from '../database/product-database.js';
-// import { v4 as uuidv4 } from 'uuid';
 import mongoose from 'mongoose';
+import autoPopulate from 'mongoose-autopopulate';
 
 const SellerSchema = new mongoose.Schema({
-  name: String,
-  allProducts: [],
+  name: { type: String, required: true, minlength: 2 },
+  allProducts: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Product',
+      autopopulate: { maxDepth: 2 },
+    },
+  ],
   comments: [],
 });
-const Seller = mongoose.model('Seller', SellerSchema);
 
-export default { Seller };
+SellerSchema.plugin(autoPopulate);
+const Seller = mongoose.model('Seller', SellerSchema);
+export default Seller;

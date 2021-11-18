@@ -1,0 +1,9 @@
+extends layout
+block content
+  h2 Clients
+  p There are #{clients.length} clients available.
+
+  ol 
+    each client in clients
+      li
+        a(href=`/clients/${client.id}`)= client.name

@@ -1,13 +1,6 @@
-import * as fs from 'fs';
-import { parse, stringify } from 'flatted';
-
-class BaseDatabase {
+class BaseService {
   constructor(model) {
-    if (model.Seller) {
-      this.model = model.Seller;
-    } else {
-      this.model = model;
-    }
+    this.model = model;
   }
 
   save(objects) {
@@ -38,4 +31,4 @@ class BaseDatabase {
     return this.model.find({ [property]: value });
   }
 }
-export default BaseDatabase;
+export default BaseService;

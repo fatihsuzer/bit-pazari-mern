@@ -1,0 +1,10 @@
+extends layout
+block content
+  h2 Products
+  p There are #{products.length} products available.
+
+  ol 
+    each product in products
+      li
+        p Sold by: #{product.seller.name}
+        a(href=`/products/${product.id}`)= product.productHeader

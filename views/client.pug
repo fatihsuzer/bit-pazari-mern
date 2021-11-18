@@ -1,0 +1,13 @@
+extends layout
+block content
+  h2 Client detail 
+  p #{client.name}
+  p clientid:  #{client.id}
+
+  h3 This user bought those items: 
+  if client.boughtProducts.length 
+    ol 
+      each product in client.boughtProducts 
+        li #{product.productHeader}
+  else 
+    p no item bought yet. 

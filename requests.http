@@ -1,7 +1,11 @@
 POST http://localhost:3000/sellers/ HTTP/1.1
 content-type: application/json
 
-{"name":"client posted seller"}
+{"name":"Dharok"}
+###
+DELETE http://localhost:3000/clients/61914614c4b8f0b6382ebe5a HTTP/1.1
+
+
 ###
 
 GET  http://localhost:3000/sellers/618b8256f082c6bebb973d22 HTTP/1.1
@@ -12,3 +16,12 @@ PATCH http://localhost:3000/sellers/618b8256f082c6bebb973d22 HTTP/1.1
 content-type: application/json
 
 {"name":"patched client of mongo"}
+
+###
+
+POST http://localhost:3000/sellers/6194068ae6ad9fd6c5af2b26 HTTP/1.1
+content-type: application/json
+
+{"productHeader":"Dharok's product","price": "15"}
+###
+GET http://localhost:3000/products/search?sellerId=6193e93f29bcebf801a00b97 HTTP/1.1

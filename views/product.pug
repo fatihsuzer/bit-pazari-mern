@@ -1,0 +1,10 @@
+extends layout
+block content
+  h2 Product detail 
+  p productid:  #{product.id}
+
+  h3 Product info:
+
+  p #{product.productHeader}
+  p Seller: #{product.seller.name}
+  p price: #{product.price}

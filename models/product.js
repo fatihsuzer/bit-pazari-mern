@@ -1,23 +1,18 @@
-import { v4 as uuidv4 } from 'uuid';
+import mongoose from 'mongoose';
+import autoPopulate from 'mongoose-autopopulate';
 
-class Product {
-  constructor(
-    id = uuidv4(),
-    productHeader,
-    seller,
-    price,
-    productComments = []
-  ) {
-    this.id = id;
-    this.productHeader = productHeader;
-    this.seller = seller;
-    this.price = price;
-    this.productComments = productComments;
-  }
+const ProductSchema = new mongoose.Schema({
+  productHeader: { type: String, required: true },
+  seller: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Seller',
+    autopopulate: true,
+  },
+  price: { type: String, required: true },
+  productComments: [],
+});
 
-  static create({ id, productHeader, seller, price, productComments }) {
-    return new Product(id, productHeader, seller, price, productComments);
-  }
-}
+ProductSchema.plugin(autoPopulate);
+const Product = mongoose.model('Product', ProductSchema);
 
 export default Product;

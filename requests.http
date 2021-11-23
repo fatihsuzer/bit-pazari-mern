@@ -1,27 +1,34 @@
 POST http://localhost:3000/sellers/ HTTP/1.1
 content-type: application/json
 
-{"name":"Dharok"}
+{"name":"Hust the seller"}
 ###
-DELETE http://localhost:3000/clients/61914614c4b8f0b6382ebe5a HTTP/1.1
+POST http://localhost:3000/clients HTTP/1.1
+content-type: application/json
 
-
-###
-
-GET  http://localhost:3000/sellers/618b8256f082c6bebb973d22 HTTP/1.1
-
+{"name":"posted client"}
 
 ###
-PATCH http://localhost:3000/sellers/618b8256f082c6bebb973d22 HTTP/1.1
+GET  http://localhost:3000/products/6194069ae6ad9fd6c5af2b29 HTTP/1.1
+
+###
+PATCH http://localhost:3000/sellers/618b788cd7d24a0cc5a9dd7f HTTP/1.1
 content-type: application/json
 
 {"name":"patched client of mongo"}
 
 ###
-
-POST http://localhost:3000/sellers/6194068ae6ad9fd6c5af2b26 HTTP/1.1
+POST http://localhost:3000/sellers/618b788cd7d24a0cc5a9dd7f HTTP/1.1
 content-type: application/json
 
-{"productHeader":"Dharok's product","price": "15"}
+{"productHeader":"lool","price": "45"}
+
 ###
-GET http://localhost:3000/products/search?sellerId=6193e93f29bcebf801a00b97 HTTP/1.1
+GET http://localhost:3000/products/search?sellerId=619bb08596a169e83648f63d HTTP/1.1
+###
+GET http://localhost:3000/sellers/618b788cd7d24a0cc5a9dd7f HTTP/1.1
+###
+GET http://localhost:3000/products/search?sellerId=618b788cd7d24a0cc5a9dd7f HTTP/1.1
+
+###
+POST http://localhost:3000/clients/619cf04ef06d50d306d1735f/buyproduct?productId=619bb14896a169e83648f64f

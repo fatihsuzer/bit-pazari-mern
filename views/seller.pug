@@ -8,6 +8,7 @@ block content
   if seller.allProducts.length 
     ol 
       each product in seller.allProducts 
-        li #{product.productHeader}
+        li   
+          a(href=`/products/${product._id}`)= product.productHeader
   else 
     p no item listed yet. 

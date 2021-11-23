@@ -1,6 +1,5 @@
 import BaseService from './base-service.js';
 import Product from '../models/product.js';
-import sellerService from './seller-service.js';
 
 class ProductService extends BaseService {
   async findByName(name) {
@@ -8,7 +7,7 @@ class ProductService extends BaseService {
   }
 
   async findBySeller(sellerId) {
-    return this.findBy('seller', sellerId);
+    return await this.model.find({ seller: sellerId });
   }
 }
 export default new ProductService(Product);

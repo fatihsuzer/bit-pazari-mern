@@ -19,7 +19,7 @@ class SellerService extends BaseService {
       seller,
       price,
     });
-    seller.allProducts.push(product._id);
+    seller.allProducts.push(product);
     await seller.save();
     return product;
   }

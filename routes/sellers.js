@@ -25,15 +25,19 @@ router.get('/:sellerId', async (req, res) => {
   res.render('seller', { seller: seller });
 });
 
-router.post('/:sellerId', async (req, res) => {
+router.post('/:sellerId', async (req, res, next) => {
   const { sellerId } = req.params;
   const { productHeader, price } = req.body;
-  const product = await sellerService.addProduct(
-    productHeader,
-    sellerId,
-    price
-  );
-  res.send(product);
+  try {
+    const product = await sellerService.addProduct(
+      productHeader,
+      sellerId,
+      price
+    );
+    res.send(product);
+  } catch (err) {
+    next(err);
+  }
 });
 
 router.delete('/:sellerId/:productId', async (req, res) => {

@@ -1,4 +1,4 @@
-import { clientService, productService } from '../services/index.js';
+import { clientService } from '../services/index.js';
 import express from 'express';
 
 const router = express.Router();
@@ -25,16 +25,18 @@ router.get('/:clientId', async (req, res) => {
   res.render('client', { client: client });
 });
 
-router.delete('/:clientId/:productId', async (req, res) => {
-  const { clientId, productId } = req.params;
-  await clientService.removeProduct(clientId, productId);
-  await productService.removeBy('id', productId);
+router.post('/:clientId/buyproduct', async (req, res) => {
+  const { clientId } = req.params;
+  const productId = req.query.productId;
+
+  await clientService.buyProduct(clientId, productId);
   res.send('OK');
 });
 
 router.patch('/:clientId', async (req, res) => {
   const { clientId } = req.params;
   const { name } = req.body;
+
   await clientService.update(clientId, { name });
 });
 

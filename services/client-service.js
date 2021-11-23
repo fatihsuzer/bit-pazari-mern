@@ -8,10 +8,13 @@ class ClientService extends BaseService {
     return currentClient.boughtProducts;
   }
 
-  async buyProduct(client, product) {
-    const currentClient = await this.find(client);
-    currentClient.boughtProducts.push(await productService.find(product));
-    this.update(client.id, currentClient.boughtProducts);
+  async buyProduct(clientId, productId) {
+    const client = await this.find(clientId);
+    const product = await productService.find(productId);
+
+    client.boughtProducts.push(product);
+    await client.save();
+    return client;
   }
 }
 
